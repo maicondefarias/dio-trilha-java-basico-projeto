@@ -3,20 +3,17 @@ import java.util.Locale;
 
 /**
  * <h1>Conta Banco</h1>
- * <p>
  * O projeto Conta Banco foi criado para exercitar todo o conteúdo apresentado 
  * no módulo de Sintaxe codificando o cenário de abertura de uma conta no banco.
  * 
- * <h2>Inputs</h2>
- * <p>
+ * <P>
+ * <b>Inputs:</b>
  * - Número de Usuário
  * - Número da Agência
  * - Nome Completo do Cliente
  * - Saldo da Contar
  * 
- * <h2>Outputs</h2>
- * <p>
- * É apresentado um texto com as informações inseridas pelo usuário.
+ * <b>Outputs:</b> É apresentado um texto com as informações inseridas pelo usuário.
  * 
  * @auto Maicon Farias
  * @version 1.0

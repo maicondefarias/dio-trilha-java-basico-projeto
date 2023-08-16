@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Locale;
 
 /**
  * @auto Maicon Farias
@@ -7,27 +8,42 @@ import java.util.Scanner;
 */
 
 public class ContaTerminal {
-    
-   
-    public static void main(String[] args) throws Exception {
+
+        /** 
+         * As declarações seguintes foram necessárias para o programa não pular linhas:
+         * 
+         * @param numeroUsuario recebe input em String e converte para Integer
+         * @param saldoConta recebe input em String e converte para Double 
+         * 
+         */
+
+    public static void main (String[] args) throws Exception {
         
 
-        Scanner entrada = new Scanner(System.in);
+        Scanner entrada = new Scanner(System.in).useLocale(Locale.US);
 
-
+        //Input Número do Usuário
         System.out.println("Digite seu número de usuário:");
-        int numeroUsuario = entrada.nextInt();
-
+        int numeroUsuario = Integer.parseInt(entrada.nextLine());
+        
+        //Input Número da Agência do Cliente
         System.out.println("Digite seu número de agência:");
         String agenciaCliente = entrada.nextLine();
 
-        System.out.println("Digite seu nome completo:");
-        String nomeCliente = entrada.nextLine();
+        //Input Nome Completo do Cliente
+        System.out.println("Digite seu nome:");
+        String nomeCompleto = entrada.nextLine();
 
+        //Input Saldo da Conta do Cliente
         System.out.println("Digite o seu saldo:");
-        double saldoConta = entrada.nextDouble();
+        double saldoConta = Double.parseDouble(entrada.next()); 
 
-        System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco. Sua agência é " + agenciaCliente + ", conta " + numeroUsuario + " e seu saldo " + saldoConta + "€ já está disponnível para saque.");
+        entrada.close(); //Fecha teclado
+
+        System.out.println(); //Apenas para separar a informação no terminal
+
+        System.out.printf("Olá " + nomeCompleto + ", \nObrigado por criar uma conta em nosso banco. \nSua agência é " 
+        + agenciaCliente + ", Conta " + numeroUsuario + " e seu saldo " + saldoConta + " EUR já está disponível para saque.");
 
         
     }

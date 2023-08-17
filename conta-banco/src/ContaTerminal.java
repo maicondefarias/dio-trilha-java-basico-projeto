@@ -15,7 +15,7 @@ import java.util.Locale;
  * 
  * <b>Outputs:</b> É apresentado um texto com as informações inseridas pelo usuário.
  * 
- * @auto Maicon Farias
+ * @author Maicon Farias
  * @version 1.0
  * @since 15/08/2023
 */
